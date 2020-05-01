@@ -156,16 +156,16 @@ def copy_all_settings(scene_a, scene_b):
         ['transform', 'offset_y'],
     ]
     
-    # todo: if setting is list, get until last one
-    for setting in settings:
-        if getattr(scene_b, setting):
-            setattr(scene_a, setting, getattr(scene_b, setting))
+    # # todo: if setting is list, get until last one
+    # for setting in settings:
+        # if getattr(scene_b, setting):
+            # setattr(scene_a, setting, getattr(scene_b, setting))
         
-    for setting in settings_multiple:
-        attr_scene_b = getattr(scene_b, setting[0])
-        attr_scene_a = getattr(scene_a, setting[0])
-        if attr_scene_b is not None:
-            setattr(attr_scene_a, setting[1], getattr(attr_scene_b, setting[1]))
+    # for setting in settings_multiple:
+        # attr_scene_b = getattr(scene_b, setting[0])
+        # attr_scene_a = getattr(scene_a, setting[0])
+        # if attr_scene_b is not None:
+            # setattr(attr_scene_a, setting[1], getattr(attr_scene_b, setting[1]))
     # # scene_a.use_translation =  scene_b.use_translation
     # # scene_a.use_reverse_frames = scene_b.use_reverse_frames
     # scene_a.use_float = scene_b.use_float
